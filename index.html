@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Semangat Skripsi! </title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">📚 Semangat Skripsi!</div>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link">Beranda</a></li>
+                <li><a href="#ucapan" class="nav-link">Ucapan Semangat</a></li>
+                <li><a href="#waktu" class="nav-link">Atur Waktu</a></li>
+                <li><a href="#checklist" class="nav-link">Checklist Revisi</a></li>
+                <li><a href="#procrastinate" class="nav-link">Hindari Prokrastinasi</a></li>
+                <li><a href="#quotes" class="nav-link">Quotes</a></li>
+                <li><a href="#pomodoro" class="nav-link">Pomodoro Timer</a></li>
+                <li><a href="#schedule" class="nav-link">Jadwal</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Home Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <div class="floating-emoji"></div>
+            <div class="floating-emoji"></div>
+            <div class="floating-emoji"></div>
+            <div class="floating-emoji"></div>
+            <h1 class="hero-title">Semangat Skripsi! </h1>
+            <p class="hero-subtitle">Untuk siapapun itu yang lagi berjuang menyelesaikan skripsinya, semoga hari ini ringan dan produktif! ✨</p>
+            <div class="hero-buttons">
+                <a href="#ucapan" class="btn btn-primary">Mulai Semangat!</a>
+                <a href="#pomodoro" class="btn btn-secondary">Mulai Fokus</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Ucapan Semangat Section -->
+    <section id="ucapan" class="section">
+        <div class="container">
+            <h2 class="section-title"> Ucapan Semangat</h2>
+            <div class="ucapan-container">
+                <div class="ucapan-card">
+                    <h3>Untuk Skripsi</h3>
+                    <div class="ucapan-content" id="ucapan-skripsi">
+                        <p>Klik tombol untuk mendapatkan ucapan semangat!</p>
+                    </div>
+                    <button class="btn-ucapan" onclick="getUcapanSkripsi()">Dapatkan Ucapan Semangat</button>
+                </div>
+                <div class="ucapan-card">
+                    <h3>Untuk Tugas Akhir</h3>
+                    <div class="ucapan-content" id="ucapan-tugas">
+                        <p>Klik tombol untuk mendapatkan ucapan semangat!</p>
+                    </div>
+                    <button class="btn-ucapan" onclick="getUcapanTugas()">Dapatkan Ucapan Semangat</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cara Atur Waktu Section -->
+    <section id="waktu" class="section section-alt">
+        <div class="container">
+            <h2 class="section-title">Cara Atur Waktu Skripsi</h2>
+            <div class="tips-container">
+                <div class="tip-card">
+                    <div class="tip-icon">1️⃣</div>
+                    <h3>Buat Timeline</h3>
+                    <p>Buat timeline dari awal sampai akhir pengerjaan skripsi. Tentukan milestone penting seperti proposal, bimbingan, ujian, dan revisi.</p>
+                </div>
+                <div class="tip-card">
+                    <div class="tip-icon">2️⃣</div>
+                    <h3>Prioritaskan Tugas</h3>
+                    <p>Gunakan metode Eisenhower Matrix: penting & mendesak, penting tapi tidak mendesak, tidak penting tapi mendesak, tidak penting & tidak mendesak.</p>
+                </div>
+                <div class="tip-card">
+                    <div class="tip-icon">3️⃣</div>
+                    <h3>Time Blocking</h3>
+                    <p>Alokasikan waktu khusus untuk skripsi setiap hari. Misalnya 2-3 jam di pagi hari ketika pikiran masih fresh.</p>
+                </div>
+                <div class="tip-card">
+                    <div class="tip-icon">4️⃣</div>
+                    <h3>Break yang Cukup</h3>
+                    <p>Jangan lupa istirahat! Gunakan teknik Pomodoro: 25 menit fokus, 5 menit istirahat. Setelah 4 pomodoro, istirahat panjang 15-30 menit.</p>
+                </div>
+                <div class="tip-card">
+                    <div class="tip-icon">5️⃣</div>
+                    <h3>Review Mingguan</h3>
+                    <p>Setiap akhir minggu, evaluasi progress dan sesuaikan rencana jika diperlukan. Fleksibel tapi tetap disiplin!</p>
+                </div>
+                <div class="tip-card">
+                    <div class="tip-icon">6️⃣</div>
+                    <h3>Hindari Multitasking</h3>
+                    <p>Fokus pada satu tugas dalam satu waktu. Multitasking mengurangi produktivitas dan kualitas kerja.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Checklist Revisi Section -->
+    <section id="checklist" class="section">
+        <div class="container">
+            <h2 class="section-title">✅ Checklist Revisi</h2>
+            <div class="checklist-container">
+                <div class="checklist-card">
+                    <h3>Revisi Skripsi</h3>
+                    <div class="checklist-list" id="checklist-skripsi">
+                        <!-- Checklist items will be added by JavaScript -->
+                    </div>
+                    <div class="checklist-input">
+                        <input type="text" id="new-item-skripsi" placeholder="Tambah item revisi...">
+                        <button onclick="addChecklistItem('skripsi')">➕ Tambah</button>
+                    </div>
+                </div>
+                <div class="checklist-card">
+                    <h3>Revisi Tugas Akhir</h3>
+                    <div class="checklist-list" id="checklist-tugas">
+                        <!-- Checklist items will be added by JavaScript -->
+                    </div>
+                    <div class="checklist-input">
+                        <input type="text" id="new-item-tugas" placeholder="Tambah item revisi...">
+                        <button onclick="addChecklistItem('tugas')">➕ Tambah</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Hindari Procrastinate Section -->
+    <section id="procrastinate" class="section section-alt">
+        <div class="container">
+            <h2 class="section-title">Cara Hindari Procrastinate</h2>
+            <div class="procrastinate-container">
+                <div class="procrastinate-card">
+                    <div class="procrastinate-icon"></div>
+                    <h3>Mulai dengan 2 Menit</h3>
+                    <p>Jika tugas terasa berat, mulai dengan komitmen 2 menit saja. Setelah mulai, biasanya akan lebih mudah untuk melanjutkan.</p>
+                </div>
+                <div class="procrastinate-card">
+                    <div class="procrastinate-icon">📱</div>
+                    <h3>Hilangkan Distraksi</h3>
+                    <p>Matikan notifikasi HP, tutup tab media sosial, dan ciptakan lingkungan kerja yang kondusif. Gunakan aplikasi website blocker jika perlu.</p>
+                </div>
+                <div class="procrastinate-card">
+                    <div class="procrastinate-icon">🏆</div>
+                    <h3>Reward System</h3>
+                    <p>Beri hadiah untuk diri sendiri setelah menyelesaikan tugas. Misalnya, setelah 2 jam fokus, boleh nonton 1 episode series favorit.</p>
+                </div>
+                <div class="procrastinate-card">
+                    <div class="procrastinate-icon">👥</div>
+                    <h3>Accountability Partner</h3>
+                    <p>Cari teman yang juga sedang skripsi dan saling mengingatkan progress. Bisa juga join grup study atau komunitas skripsi.</p>
+                </div>
+                <div class="procrastinate-card">
+                    <div class="procrastinate-icon">📊</div>
+                    <h3>Visualisasi Progress</h3>
+                    <p>Gunakan aplikasi tracking atau buat visual progress sendiri. Melihat progress yang sudah dicapai akan memotivasi untuk lanjut.</p>
+                </div>
+                <div class="procrastinate-card">
+                    <div class="procrastinate-icon">🧘</div>
+                    <h3>Mindset Shift</h3>
+                    <p>Ubah mindset dari "harus" menjadi "mau". Fokus pada manfaat jangka panjang: lulus tepat waktu, karir yang lebih baik, dll.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quotes Section -->
+    <section id="quotes" class="section">
+        <div class="container">
+            <h2 class="section-title">Quotes Motivasi</h2>
+            <div class="quotes-container">
+                <div class="quote-card" id="quote-display">
+                    <p class="quote-text">"Klik tombol untuk mendapatkan quote motivasi!"</p>
+                    <p class="quote-author"></p>
+                </div>
+                <button class="btn-quote" onclick="getRandomQuote()">🔄 Quote Baru</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pomodoro Timer Section -->
+    <section id="pomodoro" class="section section-alt">
+        <div class="container">
+            <h2 class="section-title">Pomodoro Timer</h2>
+            <div class="pomodoro-container">
+                <div class="pomodoro-card">
+                    <div class="timer-display">
+                        <div class="timer-circle">
+                            <svg class="timer-svg">
+                                <circle class="timer-bg" cx="150" cy="150" r="140"></circle>
+                                <circle class="timer-progress" cx="150" cy="150" r="140" id="timer-circle"></circle>
+                            </svg>
+                            <div class="timer-text">
+                                <span id="timer-minutes">25</span>:<span id="timer-seconds">00</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="timer-controls">
+                        <button class="btn-timer" onclick="setPomodoroTime(25)">Pomodoro (25m)</button>
+                        <button class="btn-timer" onclick="setPomodoroTime(15)">Short Break (15m)</button>
+                        <button class="btn-timer" onclick="setPomodoroTime(5)">Quick Break (5m)</button>
+                    </div>
+                    <div class="timer-buttons">
+                        <button class="btn-start" onclick="startTimer()" id="start-btn">▶️ Mulai</button>
+                        <button class="btn-pause" onclick="pauseTimer()" id="pause-btn" style="display:none;">⏸️ Pause</button>
+                        <button class="btn-reset" onclick="resetTimer()">🔄 Reset</button>
+                    </div>
+                    <div class="pomodoro-stats">
+                        <p>Pomodoro Selesai Hari Ini: <span id="pomodoro-count">0</span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Schedule Section -->
+    <section id="schedule" class="section">
+        <div class="container">
+            <h2 class="section-title">Pengaturan Jadwal</h2>
+            <div class="schedule-container">
+                <div class="schedule-form">
+                    <h3>Tambah Jadwal</h3>
+                    <input type="text" id="schedule-title" placeholder="Judul tugas/jadwal">
+                    <input type="date" id="schedule-date">
+                    <input type="time" id="schedule-time">
+                    <textarea id="schedule-notes" placeholder="Catatan (opsional)"></textarea>
+                    <button class="btn-schedule" onclick="addSchedule()">➕ Tambah Jadwal</button>
+                </div>
+                <div class="schedule-list-container">
+                    <h3>Jadwal Saya</h3>
+                    <div class="schedule-list" id="schedule-list">
+                        <!-- Schedule items will be added by JavaScript -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>💪 Tetap semangat! Kamu pasti bisa menyelesaikan skripsimu! 🎓✨</p>
+        <p>Untuk siapapun itu yang lagi berjuang menyelesaikan skripsinya, semoga hari ini ringan dan produktif!</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
